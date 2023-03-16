@@ -1,4 +1,4 @@
-<mvc:View controllerName="sap-app.controllers.index" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc">
+<mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc">
     <Shell>
         <App id="sap-app" />
     </Shell>

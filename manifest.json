@@ -31,8 +31,7 @@
                 "sap.ui.core": {}
             }
         },
-        "models": {
-        },
+        "models": {},
         "routing": {
             "config": {
                 "routerClass": "sap.m.routing.Router",
@@ -42,7 +41,10 @@
                 "controlId": "sap-app",
                 "controlAggregation": "pages",
                 "transition": "slide",
-                "async": true
+                "async": true,
+                "bypassed": {
+                    "target": "notFound"
+                }
             },
             "routes": [
                 {
@@ -57,15 +59,20 @@
                 }
             ],
             "targets": {
+                "listItems": {
+                    "id": "listItems",
+                    "name": "list-items",
+                    "level": 1
+                },
                 "home": {
                     "id": "home",
                     "name": "home",
                     "level": 1
                 },
-                "listItems": {
-                    "id": "listItems",
-                    "name": "list-items",
-                    "level": 2
+                "notFound": {
+                    "id": "not-found",
+                    "name": "not-found",
+                    "transition": "show"
                 }
             }
         }
