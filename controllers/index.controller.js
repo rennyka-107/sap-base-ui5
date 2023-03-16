@@ -17,6 +17,19 @@ sap.ui.define(
         // console.log(this.getView().getModel().oData.user.name);
       },
       onInit: function () {
+        fetch("../models/data.json")
+          .then((res) => res.json())
+          .then((res) => {
+            const model = new JSONModel({
+              users: res.data,
+              user: {
+                name: "Long",
+                age: "123",
+              },
+            });
+            this.getView().setModel(model);
+            console.log(res, "res");
+          });
         // fetch("../models/data.json")
         //   .then((res) => res.json())
         //   .then((res) => {

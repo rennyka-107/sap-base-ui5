@@ -1,5 +1,4 @@
 <mvc:View controllerName="sap-app.controllers.list-items" xmlns="sap.ui.table" xmlns:mvc="sap.ui.core.mvc" xmlns:u="sap.ui.unified" xmlns:c="sap.ui.core" xmlns:m="sap.m" height="100%">
-    <m:Text text="{/user/name}" />
     <m:Page showHeader="false" enableScrolling="false" class="sapUiContentPadding">
         <m:content>
             <Table rows="{/users}" selectionMode="MultiToggle" visibleRowCount="7" paste="onPaste" ariaLabelledBy="title">
@@ -18,7 +17,8 @@
                     <Column width="11rem">
                         <m:Label text="Age" />
                         <template>
-                            <m:Input value="{age}" />
+                            <!-- <m:Input value="{age}" /> -->
+                            <m:Text text="{age}" />
                         </template>
                     </Column>
                 </columns>
