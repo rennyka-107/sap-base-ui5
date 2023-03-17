@@ -1,0 +1,3 @@
+<mvc:View controllerName="sap-app.controllers.Employee.Detail" xmlns="sap.ui.table" xmlns:mvc="sap.ui.core.mvc" xmlns:u="sap.ui.unified" xmlns:c="sap.ui.core" xmlns:m="sap.m" height="100%">
+    <m:Text text="Detail page" />
+</mvc:View>

@@ -13,7 +13,7 @@ sap.ui.define(
         UIComponent.prototype.init.apply(this, arguments);
         const accessToken = localStorage.getItem("accessToken");
         this.getRouter().initialize();
-        if (!accessToken) {
+        if (accessToken !== "admin-token") {
           this.getRouter().navTo("login");
         }
         // create the views based on the url/hash

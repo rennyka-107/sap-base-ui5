@@ -1,3 +1,16 @@
-.text-red {
-    color: red;
+.text-login {
+    color: rgb(12, 154, 236);
+    font-size: 20px;
+}
+
+.button-login {
+    /* background-color: green; */
+}
+
+.side-navigation-demo {
+    display: flex;
+}
+
+.container-sidebar {
+    height: 100%;
 }

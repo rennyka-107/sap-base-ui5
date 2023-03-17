@@ -1,5 +1,6 @@
 <mvc:View controllerName="sap-app.controllers.index" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc">
-    <Image src="assets/sphinx-logo.png" />
-    <Button text="Say Hello" press=".onShowHello" />
-    
+    <Text text="Home page" />
+    <Page id="sap-body">
+    <content></content>
+    </Page>
 </mvc:View>
