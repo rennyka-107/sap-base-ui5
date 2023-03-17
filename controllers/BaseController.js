@@ -1,28 +1,31 @@
-sap.ui.define([
-	"sap/ui/core/mvc/Controller",
-	"sap/ui/core/routing/History",
-	"sap/ui/core/UIComponent"
-], function(Controller, History, UIComponent) {
-	"use strict";
+sap.ui.define(
+  [
+    "sap/ui/core/mvc/Controller",
+    "sap/ui/core/routing/History",
+    "sap/ui/core/UIComponent",
+  ],
+  function (Controller, History, UIComponent) {
+    "use strict";
 
-	return Controller.extend("sap-app.controllers.BaseController", {
-		getRouter : function () {
-			return UIComponent.getRouterFor(this);
-		},
+    return Controller.extend("sap-app.controllers.BaseController", {
+      onInit: function () {},
 
-		onNavBack: function () {
-			var oHistory, sPreviousHash;
+      getRouter: function () {
+        return UIComponent.getRouterFor(this);
+      },
 
-			oHistory = History.getInstance();
-			sPreviousHash = oHistory.getPreviousHash();
+      onNavBack: function () {
+        var oHistory, sPreviousHash;
 
-			if (sPreviousHash !== undefined) {
-				window.history.go(-1);
-			} else {
-				this.getRouter().navTo("home", {}, true /*no history*/);
-			}
-		}
+        oHistory = History.getInstance();
+        sPreviousHash = oHistory.getPreviousHash();
 
-	});
-
-});
+        if (sPreviousHash !== undefined) {
+          window.history.go(-1);
+        } else {
+          this.getRouter().navTo("home", {}, true /*no history*/);
+        }
+      },
+    });
+  }
+);

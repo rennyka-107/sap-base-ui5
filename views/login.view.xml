@@ -1,0 +1,4 @@
+<mvc:View controllerName="sap-app.controllers.Login" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc">
+    <Text text="login here" />
+    
+</mvc:View>

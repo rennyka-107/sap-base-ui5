@@ -7,7 +7,6 @@ sap.ui.define(
         this.getRouter().navTo("listItems");
       },
       onInit: function () {
-        
       },
       onAfterRendering: function () {
         console.log("before rendering");
