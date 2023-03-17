@@ -7,33 +7,10 @@ sap.ui.define(
         this.getRouter().navTo("listItems");
       },
       onInit: function () {
-        console.log(345)
-        // fetch("../models/data.json")
-        //   .then((res) => res.json())
-        //   .then((res) => {
-        //     const model = new JSONModel({
-        //       users: res.data,
-        //       user: {
-        //         name: "Long",
-        //         age: "123",
-        //       },
-        //     });
-        //     this.getView().setModel(model);
-        //     console.log(res, "res");
-        //   });
-        // fetch("../models/data.json")
-        //   .then((res) => res.json())
-        //   .then((res) => {
-        //     const data = {
-        //         user: {
-        //           name: "Long",
-        //           age: "28",
-        //         },
-        //       };
-        //     const model = new JSONModel(data);
-        //     this.getView().setModel(model);
-        //     console.log(res);
-        //   });
+        
+      },
+      onAfterRendering: function () {
+        console.log("before rendering");
       },
     });
   }

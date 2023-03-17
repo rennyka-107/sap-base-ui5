@@ -1,10 +1,9 @@
 sap.ui.define(
-  ["sap/ui/model/json/JSONModel", "sap-app/controllers/BaseController"],
+  ["sap-app/controllers/BaseController", "sap/ui/model/json/JSONModel"],
   function (BaseController, JSONModel) {
     "use strict";
-    return BaseController.extend("sap-app.controllers.list-items", {
+    return BaseController.extend("sap-app.controllers.ListItem", {
       onInit: function () {
-        console.log(123);
         fetch("../models/data.json")
           .then((res) => res.json())
           .then((res) => {
@@ -16,7 +15,11 @@ sap.ui.define(
               },
             });
             this.getView().setModel(model);
+            console.log(res, "res");
           });
+      },
+      onAfterRendering: function () {
+        console.log("after rendering");
       },
     });
   }

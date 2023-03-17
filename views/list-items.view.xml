@@ -1,4 +1,4 @@
-<mvc:View controllerName="sap-app.controllers.list-items" xmlns="sap.ui.table" xmlns:mvc="sap.ui.core.mvc" xmlns:u="sap.ui.unified" xmlns:c="sap.ui.core" xmlns:m="sap.m" height="100%">
+<mvc:View controllerName="sap-app.controllers.ListItem" xmlns="sap.ui.table" xmlns:mvc="sap.ui.core.mvc" xmlns:u="sap.ui.unified" xmlns:c="sap.ui.core" xmlns:m="sap.m" height="100%">
     <m:Page showHeader="false" enableScrolling="false" class="sapUiContentPadding">
         <m:content>
             <Table rows="{/users}" selectionMode="MultiToggle" visibleRowCount="7" paste="onPaste" ariaLabelledBy="title">
