@@ -32,6 +32,13 @@
             }
         },
         "models": {},
+        "resources": {
+            "css": [
+                {
+                    "uri": "style.css"
+                }
+            ]
+        },
         "routing": {
             "config": {
                 "routerClass": "sap.m.routing.Router",
@@ -47,7 +54,6 @@
                 }
             },
             "routes": [
-               
                 {
                     "pattern": "",
                     "name": "home",
@@ -62,18 +68,36 @@
                     "pattern": "login",
                     "name": "login",
                     "target": "login"
+                },
+                {
+                    "pattern": "employees",
+                    "name": "employees",
+                    "target": "employees"
+                },
+                {
+                    "pattern": "employees/list",
+                    "name": "employeesList",
+                    "target": "employeeList"
+                },
+                {
+                    "pattern": "employees/detail",
+                    "name": "employeeDetail",
+                    "target": "employeeDetail"
                 }
             ],
             "targets": {
-                "listItems": {
-                    "id": "list-items",
-                    "name": "list-items",
-                    "level": 2
-                },
                 "home": {
                     "id": "home",
                     "name": "home",
                     "level": 1
+                },
+                "listItems": {
+                    "id": "list-items",
+                    "parent": "home",
+                    "name": "ListItems",
+                    "level": 2,
+                    "controlId": "sap-body",
+                    "controlAggregation": "pages"
                 },
                 "notFound": {
                     "id": "not-found",
@@ -84,6 +108,28 @@
                     "id": "login",
                     "name": "login",
                     "transition": "show"
+                },
+                "employees": {
+                    "name": "index",
+                    "parent": "home",
+                    "path": "sap-app.views.Employee",
+                    "level": 2,
+                    "controlId": "sap-body",
+                    "controlAggregation": "pages"
+                },
+                "employeeList": {
+                    "parent": "employees",
+                    "path": "sap-app.views.Employee",
+                    "name": "List",
+                    "controlAggregation": "content",
+                    "controlId": "employeeRoot"
+                },
+                "employeeDetail": {
+                    "parent": "employees",
+                    "path": "sap-app.views.Employee",
+                    "name": "Detail",
+                    "controlAggregation": "content",
+                    "controlId": "employeeRoot"
                 }
             }
         }

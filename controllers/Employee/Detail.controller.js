@@ -2,11 +2,12 @@ sap.ui.define(
   ["sap-app/controllers/BaseController", "sap/ui/model/json/JSONModel"],
   function (BaseController, JSONModel) {
     "use strict";
-    return BaseController.extend("sap-app.controllers.index", {
+    return BaseController.extend("sap-app.controllers.Employee.Detail", {
       onInit: function () {
+        
       },
       onAfterRendering: function () {
-        this.getRouter().navTo("listItems");
+        console.log("after rendering");
       },
     });
   }
