@@ -80,7 +80,7 @@
                     "target": "employeeList"
                 },
                 {
-                    "pattern": "employees/detail",
+                    "pattern": "employees/list/{id}",
                     "name": "employeeDetail",
                     "target": "employeeDetail"
                 }
@@ -90,14 +90,6 @@
                     "id": "home",
                     "name": "home",
                     "level": 1
-                },
-                "listItems": {
-                    "id": "list-items",
-                    "parent": "home",
-                    "name": "ListItems",
-                    "level": 2,
-                    "controlId": "sap-body",
-                    "controlAggregation": "pages"
                 },
                 "notFound": {
                     "id": "not-found",
@@ -121,15 +113,15 @@
                     "parent": "employees",
                     "path": "sap-app.views.Employee",
                     "name": "List",
-                    "controlAggregation": "content",
+                    "controlAggregation": "pages",
                     "controlId": "employeeRoot"
                 },
                 "employeeDetail": {
-                    "parent": "employees",
+                    "parent": "employeeList",
                     "path": "sap-app.views.Employee",
                     "name": "Detail",
                     "controlAggregation": "content",
-                    "controlId": "employeeRoot"
+                    "controlId": "product-content"
                 }
             }
         }

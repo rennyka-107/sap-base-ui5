@@ -1,28 +1,205 @@
-<mvc:View controllerName="sap-app.controllers.Employee.List" xmlns="sap.ui.table" xmlns:mvc="sap.ui.core.mvc" xmlns:u="sap.ui.unified" xmlns:c="sap.ui.core" xmlns:m="sap.m" height="100%">
-    <m:Page showHeader="false" enableScrolling="false" class="sapUiContentPadding">
-        <m:content>
-            <Table rows="{/users}" selectionMode="MultiToggle" visibleRowCount="7" paste="onPaste" ariaLabelledBy="title">
-                <extension>
-                    <m:OverflowToolbar style="Clear">
-                        <m:Title id="title" text="Users" />
-                    </m:OverflowToolbar>
-                </extension>
-                <columns>
-                    <Column width="11rem">
-                        <m:Label text="User name" />
-                        <template>
-                            <m:Text text="{name}" wrapping="false" />
-                        </template>
-                    </Column>
-                    <Column width="11rem">
-                        <m:Label text="Age" />
-                        <template>
-                            <!-- <m:Input value="{age}" /> -->
-                            <m:Text text="{age}" />
-                        </template>
-                    </Column>
-                </columns>
-            </Table>
-        </m:content>
+<mvc:View controllerName="sap-app.controllers.Employee.List" xmlns:forms="sap.ui.layout.form" xmlns:uxap="sap.uxap" xmlns:l="sap.ui.layout" xmlns="sap.ui.table" xmlns:mvc="sap.ui.core.mvc" xmlns:u="sap.ui.unified" xmlns:c="sap.ui.core" xmlns:m="sap.m" height="100%">
+   <m:FlexBox width="100%" >
+   <m:List
+		headerText="Products">
+        	<m:layoutData>
+					<m:FlexItemData
+						growFactor="1"
+						baseSize="0"
+						backgroundDesign="Solid"
+						styleClass="sapUiTinyMargin" />
+				</m:layoutData>
+		<m:ObjectListItem
+				title="Gladiator MX"
+				type="Active"
+				press="onListItemPress"
+				number="87.50"
+				numberUnit="EUR">
+			<m:firstStatus>
+				<m:ObjectStatus
+					text="Available"
+					state="Success" />
+			</m:firstStatus>
+			<m:ObjectAttribute text="125 g" />
+			<m:ObjectAttribute text="145 x 140 x 360 cm" />
+			<m:markers>
+				<m:ObjectMarker type="Favorite" />
+				<m:ObjectMarker type="Flagged" />
+			</m:markers>
+		</m:ObjectListItem>
+		<m:ObjectListItem
+				title="Hurricane GX"
+				type="Active"
+				press="onListItemPress"
+				number="235"
+				numberUnit="EUR">
+			<m:firstStatus>
+				<m:ObjectStatus
+					text="Out of stock"
+					state="Warning" />
+			</m:firstStatus>
+			<m:ObjectAttribute text="34 g" />
+			<m:ObjectAttribute text="45 x 14 x 36 cm" />
+			<m:markers>
+				<m:ObjectMarker type="Flagged" />
+				<m:ObjectMarker type="Locked" />
+			</m:markers>
+		</m:ObjectListItem>
+		<m:ObjectListItem
+				title="Power Projector 4713"
+				type="Active"
+				press="onListItemPress"
+				number="135"
+				numberUnit="EUR">
+			<m:firstStatus>
+				<m:ObjectStatus
+					text="Discontinued"
+					state="Error" />
+			</m:firstStatus>
+			<m:ObjectAttribute text="67 g" />
+			<m:ObjectAttribute text="425 x 35 x 30 cm" />
+			<m:markers>
+				<m:ObjectMarker type="Favorite" />
+				<m:ObjectMarker type="Locked" />
+				<m:ObjectMarker type="Draft" />
+			</m:markers>
+		</m:ObjectListItem>
+		<m:ObjectListItem
+				title="Webcam"
+				type="Active"
+				press="onListItemPress"
+				number="15"
+				numberUnit="EUR">
+			<m:firstStatus>
+				<m:ObjectStatus text="New" />
+			</m:firstStatus>
+			<m:ObjectAttribute text="67 g" />
+			<m:ObjectAttribute text="15 x 15 x 10 cm" />
+			<m:markers>
+				<m:ObjectMarker type="Unsaved" />
+			</m:markers>
+		</m:ObjectListItem>
+        <m:ObjectListItem
+				title="Webcam"
+				type="Active"
+				press="onListItemPress"
+				number="15"
+				numberUnit="EUR">
+			<m:firstStatus>
+				<m:ObjectStatus text="New" />
+			</m:firstStatus>
+			<m:ObjectAttribute text="67 g" />
+			<m:ObjectAttribute text="15 x 15 x 10 cm" />
+			<m:markers>
+				<m:ObjectMarker type="Unsaved" />
+			</m:markers>
+		</m:ObjectListItem>
+        <m:ObjectListItem
+				title="Webcam"
+				type="Active"
+				press="onListItemPress"
+				number="15"
+				numberUnit="EUR">
+			<m:firstStatus>
+				<m:ObjectStatus text="New" />
+			</m:firstStatus>
+			<m:ObjectAttribute text="67 g" />
+			<m:ObjectAttribute text="15 x 15 x 10 cm" />
+			<m:markers>
+				<m:ObjectMarker type="Unsaved" />
+			</m:markers>
+		</m:ObjectListItem>
+        <m:ObjectListItem
+				title="Webcam"
+				type="Active"
+				press="onListItemPress"
+				number="15"
+				numberUnit="EUR">
+			<m:firstStatus>
+				<m:ObjectStatus text="New" />
+			</m:firstStatus>
+			<m:ObjectAttribute text="67 g" />
+			<m:ObjectAttribute text="15 x 15 x 10 cm" />
+			<m:markers>
+				<m:ObjectMarker type="Unsaved" />
+			</m:markers>
+		</m:ObjectListItem>
+	</m:List>
+    <m:Page id="product-content">
+    <m:layoutData>
+					<m:FlexItemData
+						growFactor="1"
+						baseSize="0"
+						backgroundDesign="Solid"
+						styleClass="sapUiTinyMargin" />
+				</m:layoutData>
+        <m:content></m:content>
     </m:Page>
+   </m:FlexBox>
+   
+	
+
 </mvc:View>
+
+
+<!-- {
+			"ProductId": "HT-1000",
+			"Category": "Laptops",
+			"MainCategory": "Computer Systems",
+			"TaxTarifCode": "1",
+			"SupplierName": "Very Best Screens",
+			"WeightMeasure": 4.2,
+			"WeightUnit": "KG",
+			"Description": "Notebook Basic 15 with 2,80 GHz quad core, 15\" LCD, 4 GB DDR3 RAM, 500 GB Hard Disc, Windows 8 Pro",
+			"Name": "Notebook Basic 15",
+			"DateOfSale": "2017-03-26",
+			"ProductPicUrl": "https://sdk.openui5.org/test-resources/sap/ui/documentation/sdk/images/HT-1000.jpg",
+			"Status": "Available",
+			"Quantity": 10,
+			"UoM": "PC",
+			"CurrencyCode": "EUR",
+			"Price": 956,
+			"Width": 30,
+			"Depth": 18,
+			"Height": 3,
+			"DimUnit": "cm"
+		} -->
+
+        <!-- <m:ObjectHeader
+		binding="{/product}"
+		title="Notebook Basic 15"
+		number="{
+			parts:[{path:'Price'},{path:'CurrencyCode'}],
+			type: 'sap.ui.model.type.Currency',
+			formatOptions: {showMeasure: false}
+		}"
+		numberUnit="EUR"
+		class="sapUiResponsivePadding--header" >
+        <m:layoutData>
+					<m:FlexItemData
+						growFactor="3"
+						baseSize="0"
+						backgroundDesign="Solid"
+						styleClass="sapUiTinyMargin" />
+				</m:layoutData>
+		<m:statuses>
+			<m:ObjectStatus
+				text="Some Damaged"
+				state="Error" />
+			<m:ObjectStatus
+				text="In Stock"
+				state="Success" />
+		</m:statuses>
+		<m:ObjectAttribute text="{WeightMeasure} {WeightUnit}" />
+		<m:ObjectAttribute text="{Width} x {Depth} x {Height} {DimUnit}" />
+		<m:ObjectAttribute text="{Description}" />
+		<m:ObjectAttribute
+			text="Provide feedback"
+			active="true"
+			ariaHasPopup="Dialog"
+			press="handleFeedbacklinkPressed" />
+		<m:ObjectAttribute
+			text="www.sap.com"
+			active="true"
+			press="handleSAPLinkPressed" />
+	</m:ObjectHeader> -->

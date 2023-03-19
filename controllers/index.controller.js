@@ -6,7 +6,7 @@ sap.ui.define(
       onInit: function () {
       },
       onAfterRendering: function () {
-        this.getRouter().navTo("listItems");
+        this.getRouter().navTo("employeesList");
       },
     });
   }

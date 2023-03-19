@@ -1,12 +1,14 @@
 <mvc:View
 	controllerName="sap-app.controllers.Employee.index"
 	xmlns="sap.m"
+	xmlns:t="sap.ui.table"
 	xmlns:mvc="sap.ui.core.mvc">
-	<Page title="Employee Page" id="employeeRoot" class="sapUiResponsiveContentPadding">
-    	<Button id="employeeListBtn" text="List Employees" press=".onNavToEmployees" class="sapUiTinyMarginEnd"/>
+	<App id="employeeRoot">
+		
+	</App>
+	<!-- <Page title="Employee Page"  class="sapUiResponsiveContentPadding">
 		<content>
-			<!-- <Button id="employeeOverviewBtn" text="{i18n>ShowEmployeeOverview}" press=".onNavToEmployeeOverview" class="sapUiTinyMarginEnd"/> -->
 
 		</content>
-	</Page>
+	</Page> -->
 </mvc:View>

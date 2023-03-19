@@ -13,6 +13,28 @@ sap.ui.define(
                 name: "Long",
                 age: "123",
               },
+              product: {
+                "ProductId": "HT-1000",
+                "Category": "Laptops",
+                "MainCategory": "Computer Systems",
+                "TaxTarifCode": "1",
+                "SupplierName": "Very Best Screens",
+                "WeightMeasure": 4.2,
+                "WeightUnit": "KG",
+                "Description": "Notebook Basic 15 with 2,80 GHz quad core, 15\" LCD, 4 GB DDR3 RAM, 500 GB Hard Disc, Windows 8 Pro",
+                "Name": "Notebook Basic 15",
+                "DateOfSale": "2017-03-26",
+                "ProductPicUrl": "https://sdk.openui5.org/test-resources/sap/ui/documentation/sdk/images/HT-1000.jpg",
+                "Status": "Available",
+                "Quantity": 10,
+                "UoM": "PC",
+                "CurrencyCode": "EUR",
+                "Price": 956,
+                "Width": 30,
+                "Depth": 18,
+                "Height": 3,
+                "DimUnit": "cm"
+              }
             });
             this.getView().setModel(model);
             console.log(res, "res");
