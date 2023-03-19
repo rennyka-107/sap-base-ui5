@@ -20,7 +20,7 @@ sap.ui.define(
         const { username, password } = this.getView().getModel().getData();
         if (username === "admin" && password === "admin") {
           localStorage.setItem("accessToken", "admin-token");
-          this.getRouter().navTo("/");
+          this.getRouter().navTo("home");
         }
       },
     });

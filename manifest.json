@@ -72,33 +72,32 @@
                 {
                     "pattern": "employees",
                     "name": "employees",
-                    "target":"employees"
+                    "target": "employees"
                 },
                 {
                     "pattern": "employees/list",
                     "name": "employeesList",
-                    "target":"employeeList"
+                    "target": "employeeList"
                 },
                 {
                     "pattern": "employees/detail",
                     "name": "employeeDetail",
-                    "target":"employeeDetail"
+                    "target": "employeeDetail"
                 }
             ],
             "targets": {
-                "listItems": {
-                    "id": "list-items",
-                    "name": "ListItems",
-                    "level": 2,
-                    "controlId": "sap-body",
-                    "controlAggregation": "content"
-                },
                 "home": {
                     "id": "home",
                     "name": "home",
-                    "level": 1,
+                    "level": 1
+                },
+                "listItems": {
+                    "id": "list-items",
+                    "parent": "home",
+                    "name": "ListItems",
+                    "level": 2,
                     "controlId": "sap-body",
-                    "controlAggregation": "content"
+                    "controlAggregation": "pages"
                 },
                 "notFound": {
                     "id": "not-found",
@@ -112,10 +111,11 @@
                 },
                 "employees": {
                     "name": "index",
+                    "parent": "home",
                     "path": "sap-app.views.Employee",
                     "level": 2,
                     "controlId": "sap-body",
-                    "controlAggregation": "content"
+                    "controlAggregation": "pages"
                 },
                 "employeeList": {
                     "parent": "employees",

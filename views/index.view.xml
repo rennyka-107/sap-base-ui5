@@ -1,27 +1,8 @@
-<mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:tnt="sap.tnt" height="100vh" class="side-navigation-demo">
-<App id="sap-app">
-<FlexBox >
-	<tnt:SideNavigation id="sideNavigation" selectedKey="employee-list" class="container-sidebar">
-		<tnt:NavigationList>
-			<tnt:NavigationListItem text="Employees" icon="sap-icon://employee">
-				<tnt:NavigationListItem text="List" id="employee-list" key="employee-list" />
-				<tnt:NavigationListItem text="Sub Item 2" />
-				<tnt:NavigationListItem text="Sub Item 3" id="subItem3" key="subItem3" />
-				<tnt:NavigationListItem text="Sub Item 4" />
-			</tnt:NavigationListItem>
-			<tnt:NavigationListItem text="Products" icon="sap-icon://building">
-				<tnt:NavigationListItem text="List" />
-				<tnt:NavigationListItem text="Sub Item 2" />
-				<tnt:NavigationListItem text="Sub Item 3" />
-				<tnt:NavigationListItem text="Sub Item 4" />
-			</tnt:NavigationListItem>
-		</tnt:NavigationList>
-	</tnt:SideNavigation>
-</FlexBox>
-<App id="sap-body" >
+<mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" height="100vh" class="side-navigation-demo">
+
+<App id="sap-app" >
  
 </App>
    
-</App>
 
 </mvc:View>

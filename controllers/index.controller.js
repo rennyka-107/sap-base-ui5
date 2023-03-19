@@ -3,13 +3,10 @@ sap.ui.define(
   function (BaseController, JSONModel) {
     "use strict";
     return BaseController.extend("sap-app.controllers.index", {
-      onShowHello: function () {
-        this.getRouter().navTo("listItems");
-      },
       onInit: function () {
       },
       onAfterRendering: function () {
-        console.log("before rendering");
+        this.getRouter().navTo("listItems");
       },
     });
   }

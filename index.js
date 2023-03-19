@@ -6,7 +6,7 @@ sap.ui.define([
 	new ComponentContainer({
 		name: "sap-app",
 		settings : {
-			id : "sap-app"
+			id : "sap-application"
 		},
 		async: true
 	}).placeAt("content");
