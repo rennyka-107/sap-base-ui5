@@ -12,7 +12,7 @@
 		<m:ObjectListItem
 				title="Gladiator MX"
 				type="Active"
-				press="onListItemPress"
+				press="onListItemPress(1)"
 				number="87.50"
 				numberUnit="EUR">
 			<m:firstStatus>
@@ -30,7 +30,7 @@
 		<m:ObjectListItem
 				title="Hurricane GX"
 				type="Active"
-				press="onListItemPress"
+				press="onListItemPress(2)"
 				number="235"
 				numberUnit="EUR">
 			<m:firstStatus>
@@ -48,7 +48,7 @@
 		<m:ObjectListItem
 				title="Power Projector 4713"
 				type="Active"
-				press="onListItemPress"
+				press="onListItemPress(3)"
 				number="135"
 				numberUnit="EUR">
 			<m:firstStatus>
@@ -67,7 +67,7 @@
 		<m:ObjectListItem
 				title="Webcam"
 				type="Active"
-				press="onListItemPress"
+				press="onListItemPress(4)"
 				number="15"
 				numberUnit="EUR">
 			<m:firstStatus>
@@ -82,7 +82,7 @@
         <m:ObjectListItem
 				title="Webcam"
 				type="Active"
-				press="onListItemPress"
+				press="onListItemPress(5)"
 				number="15"
 				numberUnit="EUR">
 			<m:firstStatus>
@@ -97,7 +97,7 @@
         <m:ObjectListItem
 				title="Webcam"
 				type="Active"
-				press="onListItemPress"
+				press="onListItemPress(6)"
 				number="15"
 				numberUnit="EUR">
 			<m:firstStatus>
@@ -112,7 +112,7 @@
         <m:ObjectListItem
 				title="Webcam"
 				type="Active"
-				press="onListItemPress"
+				press="onListItemPress(7)"
 				number="15"
 				numberUnit="EUR">
 			<m:firstStatus>
@@ -140,66 +140,3 @@
 	
 
 </mvc:View>
-
-
-<!-- {
-			"ProductId": "HT-1000",
-			"Category": "Laptops",
-			"MainCategory": "Computer Systems",
-			"TaxTarifCode": "1",
-			"SupplierName": "Very Best Screens",
-			"WeightMeasure": 4.2,
-			"WeightUnit": "KG",
-			"Description": "Notebook Basic 15 with 2,80 GHz quad core, 15\" LCD, 4 GB DDR3 RAM, 500 GB Hard Disc, Windows 8 Pro",
-			"Name": "Notebook Basic 15",
-			"DateOfSale": "2017-03-26",
-			"ProductPicUrl": "https://sdk.openui5.org/test-resources/sap/ui/documentation/sdk/images/HT-1000.jpg",
-			"Status": "Available",
-			"Quantity": 10,
-			"UoM": "PC",
-			"CurrencyCode": "EUR",
-			"Price": 956,
-			"Width": 30,
-			"Depth": 18,
-			"Height": 3,
-			"DimUnit": "cm"
-		} -->
-
-        <!-- <m:ObjectHeader
-		binding="{/product}"
-		title="Notebook Basic 15"
-		number="{
-			parts:[{path:'Price'},{path:'CurrencyCode'}],
-			type: 'sap.ui.model.type.Currency',
-			formatOptions: {showMeasure: false}
-		}"
-		numberUnit="EUR"
-		class="sapUiResponsivePadding--header" >
-        <m:layoutData>
-					<m:FlexItemData
-						growFactor="3"
-						baseSize="0"
-						backgroundDesign="Solid"
-						styleClass="sapUiTinyMargin" />
-				</m:layoutData>
-		<m:statuses>
-			<m:ObjectStatus
-				text="Some Damaged"
-				state="Error" />
-			<m:ObjectStatus
-				text="In Stock"
-				state="Success" />
-		</m:statuses>
-		<m:ObjectAttribute text="{WeightMeasure} {WeightUnit}" />
-		<m:ObjectAttribute text="{Width} x {Depth} x {Height} {DimUnit}" />
-		<m:ObjectAttribute text="{Description}" />
-		<m:ObjectAttribute
-			text="Provide feedback"
-			active="true"
-			ariaHasPopup="Dialog"
-			press="handleFeedbacklinkPressed" />
-		<m:ObjectAttribute
-			text="www.sap.com"
-			active="true"
-			press="handleSAPLinkPressed" />
-	</m:ObjectHeader> -->

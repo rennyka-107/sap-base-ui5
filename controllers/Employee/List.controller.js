@@ -43,6 +43,10 @@ sap.ui.define(
       onAfterRendering: function () {
         console.log("after rendering");
       },
+      onListItemPress: function(n) {
+        console.log("haha", n);
+        this.getRouter().navTo("employeeDetail", { id: n })
+      }
     });
   }
 );

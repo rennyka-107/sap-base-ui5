@@ -60,11 +60,6 @@
                     "target": "home"
                 },
                 {
-                    "pattern": "list-items",
-                    "name": "listItems",
-                    "target": "listItems"
-                },
-                {
                     "pattern": "login",
                     "name": "login",
                     "target": "login"
