@@ -1,11 +1,18 @@
 {
-  "name": "sap-demo-view",
+  "name": "sap-app",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "author": "SAP Rennyka",
+  "description": "Base sap app",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "ui5 serve",
+    "build": "ui5 build"
   },
-  "author": "",
-  "license": "ISC"
+  "dependencies": {
+    "@openui5/sap.m": "^1",
+    "@openui5/themelib_sap_fiori_3": "^1",
+    "openui5-qrcode": "^1.0.4"
+  },
+  "devDependencies": {
+    "@ui5/cli": "^2.0.0"
+  }
 }

@@ -1,5 +1,24 @@
 <mvc:View controllerName="sap-app.controllers.Employee.List" xmlns:forms="sap.ui.layout.form" xmlns:uxap="sap.uxap" xmlns:l="sap.ui.layout" xmlns="sap.ui.table" xmlns:mvc="sap.ui.core.mvc" xmlns:u="sap.ui.unified" xmlns:c="sap.ui.core" xmlns:m="sap.m" height="100%">
+ <m:Button icon="sap-icon://generate-shortcut" text="Generate QR Code" type="Accept" press="handleGenerateQRCode"></m:Button>
+ <m:HBox>
+      <m:Image densityAware="false" id="imgId">
+       <m:layoutData>
+        <m:FlexItemData growFactor="1"/>
+       </m:layoutData>
+      </m:Image>
+     </m:HBox>
    <m:FlexBox width="100%" >
+   <m:VBox>
+				<c:HTML id="html">
+				</c:HTML>
+			</m:VBox>
+			<m:VBox>
+				<m:HBox>
+<m:Button id="Signature" text="Signature" press="onSign"> </m:Button>
+					<m:Button id="Save" text="Save" press="saveButton"></m:Button>
+					<m:Button id="clear" text="Clear" press="clearButton"></m:Button>
+				</m:HBox>
+			</m:VBox>
    <m:List
 		headerText="Products">
         	<m:layoutData>
