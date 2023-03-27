@@ -1,6 +1,7 @@
+
 sap.ui.define(
   ["sap-app/controllers/BaseController", "sap/ui/model/json/JSONModel"],
-  function (BaseController, JSONModel) {
+  function (BaseController, JSONModel, QRCode) {
     "use strict";
     return BaseController.extend("sap-app.controllers.Employee.List", {
       onInit: function () {
@@ -49,30 +50,31 @@ sap.ui.define(
         this.getRouter().navTo("employeeDetail", { id: n })
       },
       handleGenerateQRCode: function () {
-        var Arr = [];
-        // Google Chart API....
-        var baseURL = "http://chart.apis.google.com/chart?cht=qr&chs=250x250&chl=";
-        var allString = "";
-        Arr.push({
-         key: "Product-Id",
-         value: 123
-        });
-        Arr.push({
-         key: "Product-Name",
-         value: "Name"
-        });
-        Arr.push({
-         key: "Product-Desc",
-         value: "Desc"
-        });
-        Arr.push({
-         key: "Company-Name",
-         value: "Company"
-        });
-        allString = escape(JSON.stringify(Arr));
-        var url = baseURL + allString;
-        // setting final URL to image,which I have taken in view....
-        this.byId("imgId").setSrc(url);
+
+        // var Arr = [];
+        // // Google Chart API....
+        // var baseURL = "http://chart.apis.google.com/chart?cht=qr&chs=250x250&chl=";
+        // var allString = "";
+        // Arr.push({
+        //  key: "Product-Id",
+        //  value: 123
+        // });
+        // Arr.push({
+        //  key: "Product-Name",
+        //  value: "Name"
+        // });
+        // Arr.push({
+        //  key: "Product-Desc",
+        //  value: "Desc"
+        // });
+        // Arr.push({
+        //  key: "Company-Name",
+        //  value: "Company"
+        // });
+        // allString = escape(JSON.stringify(Arr));
+        // var url = baseURL + allString;
+        // // setting final URL to image,which I have taken in view....
+        // this.byId("imgId").setSrc(url);
        },
        onSign : function(oEvent){
         var canvas = document.getElementById("signature-pad");

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "author": "SAP Rennyka",
   "description": "Base sap app",
+  "type": "module",
   "scripts": {
     "start": "ui5 serve",
     "build": "ui5 build"
