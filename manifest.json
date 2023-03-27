@@ -9,6 +9,15 @@
             "version": "1.0.0"
         }
     },
+    "dataSources": {
+        "default": {
+            "uri": "/proxy/",
+            "type": "OData",
+            "settings": {
+                "odataVersion": "4.0"
+            }
+        }
+    },
     "sap.ui": {
         "technology": "UI5",
         "deviceTypes": {
