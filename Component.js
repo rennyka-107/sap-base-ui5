@@ -13,6 +13,7 @@ sap.ui.define(
         UIComponent.prototype.init.apply(this, arguments);
         const accessToken = localStorage.getItem("accessToken");
         this.getRouter().initialize();
+        sap.ui.getCore().loadLibrary("it.designfuture.qrcode", "./node_modules/openui5-qrcode/src/it/designfuture/qrcode");
         if (accessToken !== "admin-token") {
           this.getRouter().navTo("login");
         }
