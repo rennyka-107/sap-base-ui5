@@ -1,11 +1,11 @@
 
 sap.ui.define(
   ["sap-app/controllers/BaseController", "sap/ui/model/json/JSONModel"],
-  function (BaseController, JSONModel, QRCode) {
+  function (BaseController, JSONModel) {
     "use strict";
     return BaseController.extend("sap-app.controllers.Employee.List", {
       onInit: function () {
-        this.getView().byId("html").setContent("<canvas id='signature-pad' width='400' height='200' class='signature-pad'></canvas>");
+        // this.getView().byId("html").setContent("<canvas id='signature-pad' width='400' height='200' class='signature-pad'></canvas>");
         fetch("../../models/data.json")
           .then((res) => res.json())
           .then((res) => {
